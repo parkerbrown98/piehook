@@ -36,7 +36,7 @@ The default file suffix can be changed via the `file_suffix` argument when using
 
 ```py
 # example_hooks.py
-from piehook import hooks
+from piehook.hooks import hooks
 
 @hooks.add('my_event')
 def some_event(a, b):
@@ -51,7 +51,7 @@ Distribute hooks across modules for better organization:
 
 ```py
 # another_example_hooks.py
-from piehook import hooks
+from piehook.hooks import hooks
 
 @hooks.add('my_event', priority=5)
 def another_event(a, b):
@@ -62,7 +62,7 @@ def another_event(a, b):
 
 ```py
 # main.py
-from piehook import hooks
+from piehook.hooks import hooks
 
 # Only required once
 hooks.import_hooks()
